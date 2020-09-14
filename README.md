@@ -27,9 +27,9 @@
 
 
 ## Introduction
-In computer science a Lexer or a tokenizer is a program that converts a sequence of charachters (raw string) into a sequence of tokens. 
+In computer science a Lexer or a tokenizer is a program that converts a sequence of characters (raw string) into a sequence of tokens. 
 
-SwiLex is a universal lexer which means that you can use it to build *any* lexer only by defining your tokens in a swift enum (in few lines of code). 
+SwiLex is a universal lexer which means that you can use it to build *any* lexer only by defining your tokens in a Swift enum (in few lines of code). 
 
 *And soon with **SwiParse** it will allow to build a full Parser.*
 
