@@ -11,3 +11,12 @@ import Foundation
 public enum SwiLexError: Error {
     case noTokenMatched(at: Substring, line: Int)
 }
+
+extension SwiLexError : LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case let .noTokenMatched(at: str, line: line):
+            return "No token matched \(str), line: \(line)"
+        }
+    }
+}
