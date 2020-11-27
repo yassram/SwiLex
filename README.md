@@ -39,7 +39,7 @@ SwiLex is distributed as a Swift Package using [SPM](https://swift.org/package-m
 To install SwiLex, add the following line to the `dependencies` list in your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/yassram/SwiLex.git", .upToNextMinor(from: "1.0.0")),
+.package(url: "https://github.com/yassram/SwiLex.git", .upToNextMinor(from: "1.1.0")),
 ```
 
 *SwiLex will support other dependency managers soon.*
