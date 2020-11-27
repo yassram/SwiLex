@@ -10,10 +10,13 @@ import Foundation
 
 // MARK: Public interface
 
-/// A type of tokens that can be used to **lex** an input string using **SwiLex**.
-public protocol SwiLexable: RawRepresentable, CaseIterable where Self.RawValue == String {
+/// A type of tokens that can be used to **lex** an input string using **SwiLex** (terminal tokens).
+public protocol SwiLexable: Hashable, RawRepresentable, CaseIterable where Self.RawValue == String {
     /// Possible modes while Lexing.
     associatedtype Mode: Hashable = AnyHashable
+
+    static var eof: Self { get }
+    static var none: Self { get }
 
     /// Characters used as sparators.
     ///

@@ -74,7 +74,8 @@ public struct SwiLex<Tokens: SwiLexable> {
             scanner.move(to: longestMatchIndex)
             scanner.removeSeparators()
         }
-
+        let end = Token(type: Tokens.eof, value: "")
+        stream.append(end)
         return stream
     }
 }
