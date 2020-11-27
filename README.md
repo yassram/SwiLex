@@ -31,7 +31,7 @@ In computer science a Lexer or a tokenizer is a program that converts a sequence
 
 SwiLex is a universal lexer which means that you can use it to build *any* lexer only by defining your tokens in a Swift enum (in few lines of code). 
 
-*And soon with **SwiParse** it will allow to build a full Parser.*
+*Combined with **SwiParse** it allows to build a full Parser. ([learn more](https://github.com/yassram/SwiParse/))*
 
 ## Installation
 SwiLex is distributed as a Swift Package using [SPM](https://swift.org/package-manager/).
@@ -62,6 +62,9 @@ enum WordNumberTokens: String, SwiLexable {
     
     case text = "[A-Za-z]*"
     case number = "[0-9]*"
+    
+    case eof
+    case none
 }
 ```
 
@@ -102,6 +105,9 @@ enum QuotedStringTextNumberTokens: String, SwiLexable {
     case number = "[0-9]*"
     case doubleQuote = "\""
     case quotedString = #"[^"]*"#
+    
+    case eof
+    case none
 }
 ```
 
@@ -169,7 +175,7 @@ A documentation with more examples is available [here](https://github.com/yassra
 - [x] Errors with line number and the issue's substring.
 - [ ] Add detailed documentation with more examples.
 - [ ] Support Cocoapods and Carthage.
-- [ ] 🔥 Create **SwiParse**, a tool that can be linked to **SwiLex** to generate a full parser. *(in progress ...)* 🔥
+- [x] 🔥 **SwiParse**, a general-purpose parser generator  that can be linked to **SwiLex** to generate a full parser. *([released here](https://github.com/yassram/SwiParse))* 🔥
 
 
 ## Contributing
